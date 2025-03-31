@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ReaPack Repository Template" commit="8db21726fe486c47bc5f0bb05191bf225f92997b">
+<index version="1" name="Antonsson Scripts" commit="8db21726fe486c47bc5f0bb05191bf225f92997b">
   <category name="Example">
     <reapack name="cfillion_Hello world.lua" type="script" desc="Hello world">
       <metadata>
