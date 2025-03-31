@@ -1,23 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="Antonsson Scripts" commit="8db21726fe486c47bc5f0bb05191bf225f92997b">
-  <category name="Example">
-    <reapack name="cfillion_Hello world.lua" type="script" desc="Hello world">
+<index version="1" name="Antonsson Scripts" commit="a4337b5276befe7f92c33ea1425632ee4ac8999e">
+  <category name="Rendering">
+    <reapack name="antonsson_Instant Shipment Evaluation.lua" type="script">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 This is an example of a package file. It installs itself as a ReaScript that does nothing but show "Hello World!" in REAPER's scripting console.\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Packages may also include additional files specified using the @provides tag.\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 This text is the documentation shown when using ReaPack's "About this package" feature. {\field{\*\fldinst{HYPERLINK "https://commonmark.org/"}}{\fldrslt{\ul
-Markdown
-}}}
- {\i formatting} is supported.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 The Instant Shipment Evaluation by Egill Antonsson\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel1 \b \fs32 Disclaimer\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Use of this software is on your own risk as it provides a powerful encouragement to "SHIP IT !",\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Thus you need to be careful about when to use it (not too soon, not too late).\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 This software is completely predictable as it has a fixed evaluation result and does no audio processing.\par}
 }
 ]]></description>
+        <link rel="website" href="https://www.egill.rocks/blog/rea-scripts/shipment-evaluator">Website</link>
+        <link rel="donation" href="https://www.paypal.com/donate/?hosted_button_id=9PSFWJT92K8U4">: Donate via PayPal</link>
       </metadata>
-      <version name="1.0" author="cfillion" time="2021-01-04T23:30:32Z">
-        <source main="main">https://github.com/cfillion/reapack-repository-template/raw/58a3e39ba95bd0f35846aa1f39aa4cb2574295e1/Example/cfillion_Hello%20world.lua</source>
+      <version name="0.0.1" author="Egill Antonsson" time="2025-03-31T06:47:24Z">
+        <changelog><![CDATA[: First release]]></changelog>
+        <source main="main">https://github.com/EgillAntonsson/REAPER-ReaScripts/raw/a4337b5276befe7f92c33ea1425632ee4ac8999e/Rendering/antonsson_Instant%20Shipment%20Evaluation.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="Utility">
+    <reapack name="antonsson_Shipment Evaluator.jsfx" type="effect" desc="Shipment Evaluator">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 The Shipment Evaluator by Egill Antonsson\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel1 \b \fs32 Disclaimer\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Use of this software is on your own risk, mainly as it provides a powerful encouragement to "SHIP IT !",\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Thus you need to be careful about when to use it (not too soon, not too late).\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 This software is completely predictable as it has a fixed evaluation result and does no audio processing.\par}
+}
+]]></description>
+        <link rel="website" href="https://www.egill.rocks/blog/shipment-evaluator">Website</link>
+        <link rel="donation" href="https://www.paypal.com/donate/?hosted_button_id=9PSFWJT92K8U4">Donate via PayPal</link>
+      </metadata>
+      <version name="0.0.1" author="Egill Antonsson" time="2025-03-31T06:47:24Z">
+        <changelog><![CDATA[First release]]></changelog>
+        <source>https://github.com/EgillAntonsson/REAPER-ReaScripts/raw/a4337b5276befe7f92c33ea1425632ee4ac8999e/Utility/antonsson_Shipment%20Evaluator.jsfx</source>
       </version>
     </reapack>
   </category>
