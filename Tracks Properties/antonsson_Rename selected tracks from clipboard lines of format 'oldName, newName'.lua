@@ -1,7 +1,7 @@
 -- @description Rename selected tracks from clipboard lines of format 'oldName, newName'
 -- @author Egill Antonsson
--- @version 0.0.1
--- @changelog: First release
+-- @version 0.0.2
+-- @changelog: Fixed script to work as expected
 -- @about
 --   # Rename selected tracks from clipboard lines of format 'oldName, newName'
 --
@@ -20,7 +20,8 @@
 
 local script_name = ({reaper.get_action_context()})[2]:match("([^/\\_]+)%.lua$")
 local UNDO_STATE_TRACKCFG = 1
-local clipboard, index = reaper.CF_GetClipboard(''), 0
+local ctx = reaper.ImGui_CreateContext('my context')
+local clipboard = reaper.ImGui_GetClipboardText(ctx)
 if clipboard:len() < 1 or reaper.CountSelectedTracks(0) < 1 then
   reaper.defer(function() end) -- no undo point
 end
@@ -29,7 +30,6 @@ reaper.ClearConsole()
 local function trim(s)
     return s:match "^%s*(.-)%s*$"
 end
-reaper.ShowConsoleMsg(clipboard)
 for line in clipboard:gmatch("([^\r\n]*)[\r\n]*") do
   local oldName = ""
   local newName = ""
@@ -43,18 +43,21 @@ for line in clipboard:gmatch("([^\r\n]*)[\r\n]*") do
       end
       count = count + 1
   end
-  --reaper.ShowConsoleMsg("oldName '" .. oldName .. "'\n")
-  --reaper.ShowConsoleMsg("newName '" .. newName .. "'\n")
-  local track = reaper.GetSelectedTrack(0, index)
-  if not track then
-    reaper.ShowConsoleMsg("No more tracks selected, stopping")
-    break
+
+  index = 0
+  local activeProject = 0
+  while (index ~= -1) do
+	local track = reaper.GetSelectedTrack(activeProject, index)
+	if not track then
+		index = -1
+		break
+	end
+	success, trackName = reaper.GetTrackName(track)
+	if (trackName == oldName) then
+		reaper.ShowConsoleMsg("Renamed track from '" .. oldName .. "' to '" .. newName .. "'\n")
+		reaper.GetSetMediaTrackInfo_String(track, 'P_NAME', newName, true)
+	end
+	index = index + 1
   end
-  success, trackName = reaper.GetTrackName(track)
-  if (trackName == oldName) then
-      reaper.ShowConsoleMsg("Renamed track to '" .. newName .. "' from '" .. oldName .. "'\n")
-      reaper.GetSetMediaTrackInfo_String(track, 'P_NAME', newName, true)
-  end
-  index = index + 1
 end
 reaper.Undo_EndBlock(script_name, UNDO_STATE_TRACKCFG)
