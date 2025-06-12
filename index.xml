@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="Antonsson Scripts" commit="a4337b5276befe7f92c33ea1425632ee4ac8999e">
+<index version="1" name="Antonsson Scripts" commit="0306605f0c20ea77278f0be61713b365c6a9418a">
   <category name="Rendering">
     <reapack name="antonsson_Instant Shipment Evaluation.lua" type="script">
       <metadata>
@@ -20,6 +20,28 @@
       <version name="0.0.1" author="Egill Antonsson" time="2025-03-31T06:47:24Z">
         <changelog><![CDATA[: First release]]></changelog>
         <source main="main">https://github.com/EgillAntonsson/REAPER-ReaScripts/raw/a4337b5276befe7f92c33ea1425632ee4ac8999e/Rendering/antonsson_Instant%20Shipment%20Evaluation.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="Tracks Properties">
+    <reapack name="antonsson_Rename selected tracks from clipboard lines of format 'oldName, newName'.lua" type="script" desc="Rename selected tracks from clipboard lines of format 'oldName, newName'">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Rename selected tracks from clipboard lines of format 'oldName, newName'\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 The script will find to the 'newName' where the 'oldName' is found. I used cfillion's script Rename selected tracks from clipboard lines as a starting point. Thanks bro :)\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel1 \b \fs32 The input format\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 The input should be in the CVS format 'oldName, newName' (without a header line)\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Example:\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Egill_says_goodbye, Egill_says_hello Egill_said_some_old_stuff, Egill_says_some_new_stuff\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.0.1" author="Egill Antonsson" time="2025-06-12T14:02:02Z">
+        <changelog><![CDATA[: First release]]></changelog>
+        <source main="main">https://github.com/EgillAntonsson/REAPER-ReaScripts/raw/0306605f0c20ea77278f0be61713b365c6a9418a/Tracks%20Properties/antonsson_Rename%20selected%20tracks%20from%20clipboard%20lines%20of%20format%20'oldName,%20newName'.lua</source>
       </version>
     </reapack>
   </category>
