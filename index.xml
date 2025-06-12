@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="Antonsson Scripts" commit="0306605f0c20ea77278f0be61713b365c6a9418a">
+<index version="1" name="Antonsson Scripts" commit="84f0518b7380f9499b014d355791527f233609b9">
   <category name="Rendering">
     <reapack name="antonsson_Instant Shipment Evaluation.lua" type="script">
       <metadata>
@@ -42,6 +42,10 @@
       <version name="0.0.1" author="Egill Antonsson" time="2025-06-12T14:02:02Z">
         <changelog><![CDATA[: First release]]></changelog>
         <source main="main">https://github.com/EgillAntonsson/REAPER-ReaScripts/raw/0306605f0c20ea77278f0be61713b365c6a9418a/Tracks%20Properties/antonsson_Rename%20selected%20tracks%20from%20clipboard%20lines%20of%20format%20'oldName,%20newName'.lua</source>
+      </version>
+      <version name="0.0.2" author="Egill Antonsson" time="2025-06-12T15:43:24Z">
+        <changelog><![CDATA[: Fixed script to work as expected]]></changelog>
+        <source main="main">https://github.com/EgillAntonsson/REAPER-ReaScripts/raw/84f0518b7380f9499b014d355791527f233609b9/Tracks%20Properties/antonsson_Rename%20selected%20tracks%20from%20clipboard%20lines%20of%20format%20'oldName,%20newName'.lua</source>
       </version>
     </reapack>
   </category>
